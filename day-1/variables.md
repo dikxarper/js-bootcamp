@@ -1,20 +1,20 @@
 # Variables
 
-Variable is a store for data. We can declare it with `let`. Use single line declaration and assignment. Multiline declaration might create a mess.
+Variable is a named storage for data. We can declare it with `let`. Use single line declaration and assignment. Multiline declaration might create a mess.
 
-`let` allows to change the value trough the code execution:
+`let` allows you to change its value during the code execution:
 
 ```js
-    let wtf = "What the fuck?"
-    wtf = "What the fock?"
-    console.log(wtf); // What the fock?
+let wtf = "What the fuck?"
+wtf = "What the fock?"
+console.log(wtf); // What the fock?
 ```
 
-Variable names are case sensitive in JS. Characters are banned, but you can use $ and _ for naming.
+Variable names are case-sensitive in JavaScript. They may contain letters, digits, underscores (`_`), and dollar signs (`$`), but they cannot begin with a digit.
 
-`let` value can be changed.
-`const` value can't be changed.
+A variable declared with `let` can be reassigned and has block scope.
+A variable declared with `const` cannot be reassigned. However, the contents of an object or array assigned to it can be modified.
 
-**Hoisting** (поднятие) moves up the variable in code execution, even though it is not declared at the top. `var` is an example, cause we are able to get variable at any line of multiline code execution. It is old school practise, it creates confusing case when the function can get the variable value before the declaration. Also, `var` can redeclare the same variable. Do not use `var` unless you are working with archaic browser.
+**Hoisting** (поднятие) means that declarations are processed before the code is executed, even if they appear later in the source code. A variable declared with `var` is initialized with `undefined`. It has function scope, not block scope.
 
-JS is dynamic typed / weak language. You do not need to specify the data type when creating the variable.
+JavaScript is a dynamically typed and weakly typed language. You do not need to specify the data type when creating the variable.

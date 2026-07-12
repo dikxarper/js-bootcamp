@@ -1,16 +1,20 @@
 # Data Types
 
-There are 8 data types:
-    (Primitive)
-    - Number. Integer and floating point numbers. It has 3 special number values:
-        - Number.POSITIVE_INFINITY (Infinity). One of the way to get it - divide the number by zero.
-        - Number.NEGATIVE_INFINITY (-Infinity).
-        - Number.NaN (NaN). It is undefined or error value after math operations. Every math operation with NaN will give NaN (except NaN**0 = 1).
-    - BigInt. Number can store numbers up to +- 2**53, there will be precision errors outside of this range. BigInt is used for that out-range. Use `n` at the end to define BigInt.
-    - String. Set of characters. It is defined with quotes (single, double, backticks). You can embed expression or variable inside backticks with `$` character.
-    - Boolean. It stores *true* or *false*.
-    - Null. It means nothing, unknown. The type of null is *object*.
-    - Undefined. It means there is no value. The variable was declared, but not assigned. Don't give it initially, use null.
-    - Symbol. These are unique strings. If you need unique variable. It is ignored in for ... in loops, Object.keys, JSON.stringify.
-    (Non-primitive)
-    - Object. Complex data.
+There are eight data types in JavaScript: seven primitive types and objects.
+
+## Primitive
+
+- `Number` represents integer and floating-point numbers. Its special values include:
+    - `Infinity`. One way to get it is to divide a positive number by zero.
+    - `-Infinity`. One way to get it is to divide a negative number by zero.
+    - `NaN`. It represents an invalid numeric result. Interestingly, `typeof NaN === "number"`.
+- `BigInt` represents integers of arbitrary size. The safe integer range for `Number` is from `-(2 ** 53 - 1)` to `2 ** 53 - 1`. Add `n` to an integer literal to create a `BigInt`, for example `123n`. Mixing `BigInt` and `Number` in arithmetic operations causes a `TypeError`.
+- `String` represents text. Strings can be created with single quotes, double quotes, or backticks. Template literals allow expressions such as `${expression}`.
+- `Boolean` has two possible values: `true` and `false`.
+- `null` represents an intentional absence of a value. `typeof null` returns `"object"` because of a historical JavaScript bug, but `null` is a primitive value.
+- `undefined` usually means that a value has not been assigned.
+- `Symbol` represents a unique primitive value, often used as an object property key. Symbol-keyed properties are ignored by `for...in`, `Object.keys()`, and `JSON.stringify()`.
+
+## Non-primitive
+
+- `Object` represents collections of data and more complex entities. Arrays and functions are also objects, although `typeof` returns `"function"` for functions.

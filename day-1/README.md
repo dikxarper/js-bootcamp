@@ -1,5 +1,9 @@
-https://javascript.info/first-steps
+# Day 1
 
-Day 1.
+Lessons 1–6 from [JavaScript Fundamentals](https://javascript.info/first-steps).
 
-1 - 6 lessons.
+Topics:
+
+- Variables
+- Data types
+- Browser interactions
