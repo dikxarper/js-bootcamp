@@ -41,7 +41,7 @@ function test() {
 
 Function Declaration:
 
-```python
+```javascript
 
 function sayHello() {
     return "Hello";
@@ -51,7 +51,7 @@ function sayHello() {
 
 Function Expression:
 
-```python
+```javascript
 
 const sayHello = function () {
     return "Hello";
@@ -61,7 +61,7 @@ const sayHello = function () {
 
 Именной Function Expression. `greet` доступно снаружи, а `sayHello` доступно только внутри самой функции:
 
-```python
+```javascript
 
 const greet = function sayHello() {
   console.log(typeof sayHello);
